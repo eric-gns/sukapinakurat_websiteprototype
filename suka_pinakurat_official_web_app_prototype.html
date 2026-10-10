@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suka Pinakurat | Official Brand & Product Showcase</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Vector Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        maroon: {
+                            50: '#FDF2F2',
+                            100: '#FDE8E8',
+                            600: '#9B1C1C',
+                            700: '#800000',
+                            800: '#6A040F',
+                            900: '#37000B',
+                            950: '#210006',
+                        },
+                        amberGold: {
+                            300: '#FDE047',
+                            400: '#FACC15',
+                            500: '#E0A96D',
+                            600: '#D4AF37',
+                            700: '#B8860B',
+                        },
+                        cream: {
+                            50: '#FFFDF9',
+                            100: '#FAF7F2',
+                            200: '#F3ECE0',
+                            300: '#E6D9C5',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-nav {
+            background: rgba(55, 0, 11, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .pattern-bg {
+            background-color: #37000B;
+            background-image: radial-gradient(#d4af37 0.75px, transparent 0.75px), radial-gradient(#d4af37 0.75px, #37000B 0.75px);
+            background-size: 28px 28px;
+            background-position: 0 0, 14px 14px;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 6px;
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="bg-cream-100 text-slate-800 font-sans antialiased selection:bg-amberGold-600 selection:text-white">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-amberGold-600/30 text-white transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo & Provenance -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-amberGold-600 to-amberGold-400 p-0.5 shadow-lg group-hover:scale-105 transition-transform">
+                        <div class="w-full h-full bg-maroon-900 rounded-full flex items-center justify-center text-amberGold-400 font-bold text-xl font-serif">
+                            🌶️
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif font-extrabold text-xl tracking-wider text-amber-100 group-hover:text-amberGold-400 transition-colors">SUKA PINAKURAT</span>
+                        <span class="text-[10px] tracking-widest text-amberGold-500 uppercase font-bold">Green Gold Gourmet Foods</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center gap-7 text-xs lg:text-sm font-semibold tracking-wide">
+                    <a href="#heritage" class="hover:text-amberGold-400 transition-colors py-1">Heritage</a>
+                    <a href="#products" class="hover:text-amberGold-400 transition-colors py-1">Products</a>
+                    <a href="#pairing" class="hover:text-amberGold-400 transition-colors py-1">Pairing Guide</a>
+                    <a href="#locator" class="hover:text-amberGold-400 transition-colors py-1">Where to Buy</a>
+                    <a href="#authenticity" class="hover:text-amberGold-400 transition-colors py-1">Authenticity</a>
+                    <a href="#wholesale" class="hover:text-amberGold-400 transition-colors py-1">Wholesale & Export</a>
+                </nav>
+
+                <!-- Desktop CTA -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="#locator" class="bg-gradient-to-r from-amberGold-600 to-amberGold-400 hover:from-amberGold-700 hover:to-amberGold-500 text-maroon-950 font-bold px-5 py-2.5 rounded-full shadow-lg hover:shadow-amberGold-500/20 hover:scale-105 transition-all text-xs uppercase tracking-wider flex items-center gap-2">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span>Where To Buy</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-btn" aria-label="Toggle Navigation" class="md:hidden p-2 rounded-lg text-amber-100 hover:text-amberGold-400 focus:outline-none">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-maroon-950 border-b border-amberGold-600/30 px-6 pt-4 pb-6 transition-all">
+            <div class="flex flex-col gap-4 text-sm font-medium">
+                <a href="#heritage" class="mobile-nav-link text-amber-100 hover:text-amberGold-400 py-2 border-b border-maroon-900">Our Heritage & Iligan Roots</a>
+                <a href="#products" class="mobile-nav-link text-amber-100 hover:text-amberGold-400 py-2 border-b border-maroon-900">Gourmet Product Catalog</a>
+                <a href="#pairing" class="mobile-nav-link text-amber-100 hover:text-amberGold-400 py-2 border-b border-maroon-900">Interactive Dip Calculator</a>
+                <a href="#locator" class="mobile-nav-link text-amber-100 hover:text-amberGold-400 py-2 border-b border-maroon-900">Store Locator & E-Commerce</a>
+                <a href="#authenticity" class="mobile-nav-link text-amber-100 hover:text-amberGold-400 py-2 border-b border-maroon-900">IP Seal & Authenticity Guarantee</a>
+                <a href="#wholesale" class="mobile-nav-link text-amber-100 hover:text-amberGold-400 py-2 border-b border-maroon-900">Wholesale & Export Opportunities</a>
+                <a href="#locator" class="bg-amberGold-600 hover:bg-amberGold-700 text-maroon-950 font-bold text-center py-3 rounded-xl mt-2 flex items-center justify-center gap-2">
+                    <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                    <span>Find Supermarket or Shop Online</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-maroon-950 via-maroon-900 to-maroon-950 text-white overflow-hidden pattern-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Column -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-amberGold-600/15 border border-amberGold-500/40 rounded-full px-4 py-1.5 text-amberGold-400 text-xs font-bold tracking-widest uppercase">
+                        <span class="w-2 h-2 rounded-full bg-amberGold-400 animate-ping"></span>
+                        <span>Official Brand Showcase • Iligan City, Mindanao</span>
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-amber-50 leading-tight">
+                        The One & Only <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amberGold-300 via-amberGold-400 to-amberGold-600">Authentic Spiced</span> <br>
+                        Coconut Sap Vinegar.
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Handcrafted from pure fermented natural coconut sap (<span class="text-amberGold-400 font-semibold">Sukang Tuba</span>), infused with wild native bird's eye chilies, fresh garlic, ginger, and aromatic spices. The cornerstone of Filipino dining tables worldwide.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#products" class="w-full sm:w-auto bg-gradient-to-r from-amberGold-600 to-amberGold-400 hover:from-amberGold-700 hover:to-amberGold-500 text-maroon-950 font-extrabold px-8 py-4 rounded-xl shadow-xl hover:shadow-amberGold-500/25 transition-all text-center flex items-center justify-center gap-3 group">
+                            <span>Explore Product Lineup</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#pairing" class="w-full sm:w-auto bg-maroon-900/90 hover:bg-maroon-800 text-amber-100 border border-amberGold-500/40 font-bold px-7 py-4 rounded-xl transition-all text-center flex items-center justify-center gap-2 backdrop-blur-sm">
+                            <i data-lucide="utensils" class="w-5 h-5 text-amberGold-400"></i>
+                            <span>Interactive Pairing Tool</span>
+                        </a>
+                    </div>
+
+                    <!-- Key Brand Stats -->
+                    <div class="pt-8 border-t border-maroon-800 grid grid-cols-3 gap-4 text-center">
+                        <div class="bg-maroon-900/50 p-3 rounded-2xl border border-amberGold-600/20">
+                            <p class="text-2xl sm:text-3xl font-extrabold font-serif text-amberGold-400">100%</p>
+                            <p class="text-[11px] text-slate-300 mt-0.5 uppercase tracking-wide font-semibold">Natural Tuba Sap</p>
+                        </div>
+                        <div class="bg-maroon-900/50 p-3 rounded-2xl border border-amberGold-600/20">
+                            <p class="text-2xl sm:text-3xl font-extrabold font-serif text-amberGold-400">0%</p>
+                            <p class="text-[11px] text-slate-300 mt-0.5 uppercase tracking-wide font-semibold">Synthetic Acetic Acid</p>
+                        </div>
+                        <div class="bg-maroon-900/50 p-3 rounded-2xl border border-amberGold-600/20">
+                            <p class="text-2xl sm:text-3xl font-extrabold font-serif text-amberGold-400">Global</p>
+                            <p class="text-[11px] text-slate-300 mt-0.5 uppercase tracking-wide font-semibold">Export Quality</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Right Interactive Showcase Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative bg-gradient-to-b from-maroon-900/90 to-maroon-950/90 rounded-3xl p-6 border-2 border-amberGold-600/40 shadow-2xl backdrop-blur-md">
+                        
+                        <!-- Authenticity Badge Overlay -->
+                        <div class="absolute -top-4 -right-4 bg-gradient-to-tr from-amberGold-600 to-amberGold-400 text-maroon-950 font-black text-xs p-3 rounded-full shadow-2xl border-2 border-maroon-950 flex flex-col items-center justify-center w-20 h-20 text-center leading-tight">
+                            <span>100%</span>
+                            <span class="text-[8px] uppercase tracking-tighter font-extrabold">ORIGINAL</span>
+                        </div>
+
+                        <!-- Card Inner Box -->
+                        <div class="bg-maroon-950/80 rounded-2xl p-6 border border-amberGold-600/30 text-center space-y-4">
+                            <div class="py-4 flex justify-center">
+                                <div class="w-40 h-72 bg-gradient-to-b from-amber-950 via-maroon-900 to-maroon-950 rounded-2xl border-2 border-amberGold-500/60 shadow-2xl flex flex-col items-center justify-between p-4 relative overflow-hidden">
+                                    <div class="w-full bg-amberGold-600/20 text-[9px] text-amberGold-300 font-extrabold py-1 uppercase rounded tracking-wider border border-amberGold-500/30">
+                                        Mindanao Gourmet
+                                    </div>
+                                    <div class="my-auto text-center">
+                                        <div class="text-4xl">🌶️</div>
+                                        <div class="text-amber-100 font-serif font-black text-2xl tracking-tight leading-none mt-2">SUKA</div>
+                                        <div class="text-amberGold-400 font-serif font-black text-xl tracking-tight leading-none">PINAKURAT</div>
+                                        <p class="text-[9px] text-amber-200/80 mt-1 uppercase font-semibold">Spiced Coconut Sap Vinegar</p>
+                                    </div>
+                                    <div class="text-[9px] text-amberGold-400 font-bold border-t border-amberGold-600/40 pt-1.5 w-full">
+                                        Iligan City, Philippines
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-1">
+                                <h3 class="font-serif text-xl font-bold text-amber-100">Suka Pinakurat Extra Hot</h3>
+                                <p class="text-xs text-slate-300 leading-relaxed">The legendary extra-hot coconut sap vinegar that defined Philippine dipping sauce culture.</p>
+                            </div>
+
+                            <div class="flex items-center justify-center gap-1.5 text-amberGold-400 text-xs font-semibold pt-2">
+                                <span>🌶️🌶️🌶️🌶️🌶️</span>
+                                <span class="text-slate-300 ml-2 font-mono text-[11px]">(Heat Index: 5/5)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Heritage & Storytelling Section -->
+    <section id="heritage" class="py-20 bg-cream-50 text-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-maroon-700 font-bold text-xs tracking-widest uppercase">The Green Gold Gourmet Story</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-maroon-900">Proudly Rooted in Iligan City</h2>
+                <p class="text-slate-600 text-base leading-relaxed">
+                    "Pinakurat" comes from the Visayan root word <span class="font-bold text-maroon-800">"Kurat"</span> — meaning to shock or pleasantly surprise. What began as an artisan home recipe in Iligan City has grown into a globally celebrated Philippine food treasure.
+                </p>
+            </div>
+
+            <div class="mt-16 grid md:grid-cols-3 gap-8">
+                <!-- Heritage Feature 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-cream-300 shadow-sm hover:shadow-md transition-all space-y-4">
+                    <div class="w-14 h-14 bg-maroon-100 rounded-2xl flex items-center justify-center text-maroon-700">
+                        <i data-lucide="palmtree" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-maroon-900">1. Natural Coconut Tuba Sap</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Harvested fresh from local coconut blossom stalks by Mindanao farmers. Naturally fermented into organic vinegar rich in natural amino acids and minerals.
+                    </p>
+                </div>
+
+                <!-- Heritage Feature 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-cream-300 shadow-sm hover:shadow-md transition-all space-y-4">
+                    <div class="w-14 h-14 bg-amberGold-500/20 rounded-2xl flex items-center justify-center text-amberGold-700">
+                        <i data-lucide="flame" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-maroon-900">2. Infused Native Spices</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Steeped in small artisanal batches with hand-selected native bird's eye chilies, crushed garlic, ginger, and peppercorns for unmistakable depth.
+                    </p>
+                </div>
+
+                <!-- Heritage Feature 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-cream-300 shadow-sm hover:shadow-md transition-all space-y-4">
+                    <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-800">
+                        <i data-lucide="users" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-maroon-900">3. Empowering Local Farmers</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Green Gold Gourmet Foods Inc. directly partners with coconut farming cooperatives across Northern Mindanao, sustaining local agricultural livelihoods.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Catalog Section -->
+    <section id="products" class="py-20 bg-cream-100 border-t border-cream-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span class="text-amberGold-700 font-bold text-xs tracking-widest uppercase">Gourmet Offerings</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-maroon-900 mt-1">Our Craft Product Catalog</h2>
+                </div>
+
+                <!-- Product Filters -->
+                <div class="flex items-center gap-2 bg-cream-200 p-1.5 rounded-2xl overflow-x-auto custom-scrollbar">
+                    <button onclick="filterProducts('all')" class="product-tab px-4 py-2 rounded-xl text-xs font-bold transition-all bg-maroon-800 text-white shadow-sm whitespace-nowrap">All Items</button>
+                    <button onclick="filterProducts('vinegar')" class="product-tab px-4 py-2 rounded-xl text-xs font-bold transition-all text-slate-700 hover:text-maroon-900 whitespace-nowrap">Vinegars</button>
+                    <button onclick="filterProducts('meat')" class="product-tab px-4 py-2 rounded-xl text-xs font-bold transition-all text-slate-700 hover:text-maroon-900 whitespace-nowrap">Delisario™ Meats</button>
+                    <button onclick="filterProducts('ale')" class="product-tab px-4 py-2 rounded-xl text-xs font-bold transition-all text-slate-700 hover:text-maroon-900 whitespace-nowrap">Fat Pauly's™ Ales</button>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div id="product-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Product Card 1: Pinakurat Original -->
+                <div class="product-card vinegar bg-white rounded-3xl border border-cream-300 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="bg-gradient-to-br from-maroon-950 via-maroon-900 to-maroon-800 p-8 text-center relative">
+                        <span class="absolute top-4 right-4 bg-amberGold-500 text-maroon-950 text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">Flagship Seller</span>
+                        <div class="text-6xl my-4">🌶️</div>
+                        <span class="text-amberGold-400 font-extrabold text-xs tracking-widest uppercase">Extra Hot Spiced Sap</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-maroon-900">Suka Pinakurat Original</h3>
+                            <p class="text-slate-600 text-xs mt-2 leading-relaxed">The legendary spiced coconut sap vinegar. Pungent, tangy, and loaded with natural chili kick.</p>
+                        </div>
+                        <div class="border-t border-cream-200 pt-4 flex items-center justify-between">
+                            <span class="text-xs font-bold text-maroon-700">Heat Index: 🌶️🌶️🌶️🌶️🌶️</span>
+                            <button onclick="openProductModal('pinakurat-original')" class="bg-maroon-800 hover:bg-maroon-900 text-amberGold-400 font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 transition-colors">
+                                <span>Quick View</span>
+                                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2: Pinakurat Sweetened -->
+                <div class="product-card vinegar bg-white rounded-3xl border border-cream-300 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="bg-gradient-to-br from-amber-950 via-maroon-900 to-maroon-800 p-8 text-center relative">
+                        <span class="absolute top-4 right-4 bg-amber-200 text-amber-950 text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">Sweet & Tangy</span>
+                        <div class="text-6xl my-4">🍯</div>
+                        <span class="text-amberGold-300 font-extrabold text-xs tracking-widest uppercase">Sweetened Spiced Sap</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-maroon-900">Suka Pinakurat Sweetened</h3>
+                            <p class="text-slate-600 text-xs mt-2 leading-relaxed">Blend of natural unrefined cane sugar, fermented tuba sap, and mild garlic chilies.</p>
+                        </div>
+                        <div class="border-t border-cream-200 pt-4 flex items-center justify-between">
+                            <span class="text-xs font-bold text-amber-700">Heat Index: 🌶️🌶️🌶️</span>
+                            <button onclick="openProductModal('pinakurat-sweetened')" class="bg-maroon-800 hover:bg-maroon-900 text-amberGold-400 font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 transition-colors">
+                                <span>Quick View</span>
+                                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3: Waykurat -->
+                <div class="product-card vinegar bg-white rounded-3xl border border-cream-300 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="bg-gradient-to-br from-emerald-950 via-teal-900 to-emerald-900 p-8 text-center relative">
+                        <span class="absolute top-4 right-4 bg-emerald-300 text-emerald-950 text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">Capsicum Free</span>
+                        <div class="text-6xl my-4">🧄</div>
+                        <span class="text-emerald-300 font-extrabold text-xs tracking-widest uppercase">Garlic Herb Spiced Sap</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-maroon-900">Suka Waykurat</h3>
+                            <p class="text-slate-600 text-xs mt-2 leading-relaxed">Rich garlic, ginger, and herb aromatics of the original recipe without spicy capsicum heat.</p>
+                        </div>
+                        <div class="border-t border-cream-200 pt-4 flex items-center justify-between">
+                            <span class="text-xs font-bold text-emerald-700">Heat Index: 🌿 Zero Heat</span>
+                            <button onclick="openProductModal('waykurat')" class="bg-maroon-800 hover:bg-maroon-900 text-amberGold-400 font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 transition-colors">
+                                <span>Quick View</span>
+                                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4: Delisario Craft Meats -->
+                <div class="product-card meat bg-white rounded-3xl border border-cream-300 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="bg-gradient-to-br from-stone-900 via-red-950 to-maroon-950 p-8 text-center relative">
+                        <span class="absolute top-4 right-4 bg-red-500 text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">Artisan Meats</span>
+                        <div class="text-6xl my-4">🥓</div>
+                        <span class="text-amberGold-400 font-extrabold text-xs tracking-widest uppercase">Processed Meat Line</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-maroon-900">Delisario™ Artisan Craft Meats</h3>
+                            <p class="text-slate-600 text-xs mt-2 leading-relaxed">Premium cured bacon, artisan longganisa, and hardwood smoked sausages made to pair with Pinakurat.</p>
+                        </div>
+                        <div class="border-t border-cream-200 pt-4 flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-600">Delisario Sub-Brand</span>
+                            <button onclick="openProductModal('delisario')" class="bg-maroon-800 hover:bg-maroon-900 text-amberGold-400 font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 transition-colors">
+                                <span>Quick View</span>
+                                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 5: Fat Pauly's Ales -->
+                <div class="product-card ale bg-white rounded-3xl border border-cream-300 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="bg-gradient-to-br from-amber-950 via-stone-900 to-amber-900 p-8 text-center relative">
+                        <span class="absolute top-4 right-4 bg-amberGold-500 text-maroon-950 text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">Iligan Brewery</span>
+                        <div class="text-6xl my-4">🍺</div>
+                        <span class="text-amber-300 font-extrabold text-xs tracking-widest uppercase">Local Craft Ales</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-maroon-900">Fat Pauly's™ Hand-Crafted Ales</h3>
+                            <p class="text-slate-600 text-xs mt-2 leading-relaxed">Pioneering Mindanao craft microbrewery integrating local indigenous ingredients and hops.</p>
+                        </div>
+                        <div class="border-t border-cream-200 pt-4 flex items-center justify-between">
+                            <span class="text-xs font-bold text-amber-800">Fat Pauly's Sub-Brand</span>
+                            <button onclick="openProductModal('fatpaulys')" class="bg-maroon-800 hover:bg-maroon-900 text-amberGold-400 font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 transition-colors">
+                                <span>Quick View</span>
+                                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Food Pairing Calculator -->
+    <section id="pairing" class="py-20 bg-maroon-950 text-white relative pattern-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-amberGold-400 font-bold text-xs tracking-widest uppercase">Flavor Science</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-amber-100">Interactive Dish & Dip Calculator</h2>
+                <p class="text-slate-300 text-sm sm:text-base">
+                    Select any classic dish below to calculate the optimal Pinakurat pairing and reveal secret dipping sauce recipes.
+                </p>
+            </div>
+
+            <div class="mt-12 grid lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Dish Buttons Column -->
+                <div class="lg:col-span-5 space-y-3">
+                    <label class="block text-xs font-bold text-amberGold-400 uppercase tracking-wider mb-2">Choose Favorite Dish:</label>
+
+                    <button onclick="selectDish('lechon', this)" class="dish-btn active-dish w-full p-4 rounded-2xl border-2 border-amberGold-500 bg-maroon-900 text-left transition-all flex items-center justify-between shadow-lg">
+                        <div class="flex items-center gap-3">
+                            <span class="text-3xl">🐖</span>
+                            <div>
+                                <h4 class="font-bold text-amber-100 text-sm">Cebu Crispy Lechon</h4>
+                                <p class="text-xs text-slate-300">Rich, fatty roast pork with crunchy skin</p>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-5 h-5 text-amberGold-400"></i>
+                    </button>
+
+                    <button onclick="selectDish('pata', this)" class="dish-btn w-full p-4 rounded-2xl border border-amberGold-600/30 bg-maroon-900/60 hover:bg-maroon-900 text-left transition-all flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <span class="text-3xl">🍖</span>
+                            <div>
+                                <h4 class="font-bold text-amber-100 text-sm">Crispy Pata</h4>
+                                <p class="text-xs text-slate-300">Deep-fried pork knuckle with crunchy crackling</p>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-5 h-5 text-slate-400"></i>
+                    </button>
+
+                    <button onclick="selectDish('bbq', this)" class="dish-btn w-full p-4 rounded-2xl border border-amberGold-600/30 bg-maroon-900/60 hover:bg-maroon-900 text-left transition-all flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <span class="text-3xl">🍢</span>
+                            <div>
+                                <h4 class="font-bold text-amber-100 text-sm">Pork BBQ Skewers</h4>
+                                <p class="text-xs text-slate-300">Sweet-savory grilled banana ketchup glazed pork</p>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-5 h-5 text-slate-400"></i>
+                    </button>
+
+                    <button onclick="selectDish('chicharon', this)" class="dish-btn w-full p-4 rounded-2xl border border-amberGold-600/30 bg-maroon-900/60 hover:bg-maroon-900 text-left transition-all flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <span class="text-3xl">🥓</span>
+                            <div>
+                                <h4 class="font-bold text-amber-100 text-sm">Chicharon Bulaklak</h4>
+                                <p class="text-xs text-slate-300">Deep-fried ruffled mesentery pork cracklings</p>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-5 h-5 text-slate-400"></i>
+                    </button>
+
+                    <button onclick="selectDish('tilapia', this)" class="dish-btn w-full p-4 rounded-2xl border border-amberGold-600/30 bg-maroon-900/60 hover:bg-maroon-900 text-left transition-all flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <span class="text-3xl">🐟</span>
+                            <div>
+                                <h4 class="font-bold text-amber-100 text-sm">Char-Grilled Tilapia</h4>
+                                <p class="text-xs text-slate-300">Fresh smoky grilled fish & seafood</p>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-5 h-5 text-slate-400"></i>
+                    </button>
+
+                    <button onclick="selectDish('lumpia', this)" class="dish-btn w-full p-4 rounded-2xl border border-amberGold-600/30 bg-maroon-900/60 hover:bg-maroon-900 text-left transition-all flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <span class="text-3xl">🥟</span>
+                            <div>
+                                <h4 class="font-bold text-amber-100 text-sm">Lumpiang Shanghai</h4>
+                                <p class="text-xs text-slate-300">Fried pork egg rolls & savory dumplings</p>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-5 h-5 text-slate-400"></i>
+                    </button>
+                </div>
+
+                <!-- Display Result Column -->
+                <div class="lg:col-span-7 bg-maroon-900/95 border-2 border-amberGold-500/50 p-8 rounded-3xl backdrop-blur-md space-y-6 shadow-2xl">
+                    <div class="flex items-center justify-between border-b border-maroon-800 pb-4">
+                        <div>
+                            <span class="text-xs text-amberGold-400 font-bold uppercase tracking-wider">Recommended Match</span>
+                            <h3 id="pair-recommended" class="font-serif text-2xl font-bold text-amber-100 mt-1">Suka Pinakurat Original</h3>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-3xl font-extrabold text-amberGold-400 font-serif" id="pair-score">100%</span>
+                            <span class="block text-[10px] text-slate-300 uppercase tracking-wider font-semibold">Flavor Synergy</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <h4 class="text-xs font-bold text-amberGold-400 uppercase tracking-wider flex items-center gap-2">
+                            <i data-lucide="flame" class="w-4 h-4 text-amberGold-400"></i>
+                            <span>Heat & Acid Balance:</span>
+                        </h4>
+                        <p id="pair-heat" class="text-sm text-slate-200 font-semibold">
+                            🌶️🌶️🌶️🌶️🌶️ (High Acid / Bold Chili Heat)
+                        </p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <h4 class="text-xs font-bold text-amberGold-400 uppercase tracking-wider flex items-center gap-2">
+                            <i data-lucide="sparkles" class="w-4 h-4 text-amberGold-400"></i>
+                            <span>Flavor Pairing Science</span>
+                        </h4>
+                        <p id="pair-description" class="text-sm text-slate-300 leading-relaxed">
+                            The organic acetic acid in fermented tuba sap slices cleanly through dense pork lipids and rich crackling skin, while capsaicin chilies trigger flavor receptors.
+                        </p>
+                    </div>
+
+                    <div class="bg-maroon-950 p-5 rounded-2xl border border-amberGold-500/30 space-y-2">
+                        <h4 class="text-xs font-bold text-amberGold-400 uppercase tracking-wider flex items-center gap-1.5">
+                            <i data-lucide="chef-hat" class="w-4 h-4"></i>
+                            <span>Recommended Dipping Sauce Mix:</span>
+                        </h4>
+                        <p id="pair-recipe" class="text-xs text-amber-100 font-mono leading-relaxed">
+                            3 tbsp Suka Pinakurat Original + 1 crushed calamansi + 1/2 tsp roasted garlic chips + 1 pinch sea salt.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Locator & E-Commerce Hub -->
+    <section id="locator" class="py-20 bg-cream-50 text-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-maroon-700 font-bold text-xs tracking-widest uppercase">Retail Network</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-maroon-900">Where to Buy Suka Pinakurat</h2>
+                <p class="text-slate-600 text-sm sm:text-base">
+                    Find genuine Pinakurat bottles at major supermarket chains or order online directly from authorized flagship channels.
+                </p>
+            </div>
+
+            <!-- Search & Region Filters -->
+            <div class="mt-10 max-w-3xl mx-auto space-y-4">
+                <div class="relative">
+                    <i data-lucide="search" class="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    <input type="text" id="store-search" onkeyup="filterStores()" placeholder="Search store name, chain, or location (SM, Robinsons, Shopee, Luzon, Mindanao)..." class="w-full pl-12 pr-4 py-3.5 rounded-2xl border border-cream-300 focus:outline-none focus:ring-2 focus:ring-amberGold-500 text-sm shadow-sm bg-white">
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-2 text-xs font-bold">
+                    <button onclick="filterRegion('all')" class="region-pill px-3.5 py-1.5 rounded-full bg-maroon-800 text-white shadow-sm">All Networks</button>
+                    <button onclick="filterRegion('Mindanao')" class="region-pill px-3.5 py-1.5 rounded-full bg-cream-200 text-slate-700 hover:bg-cream-300">Mindanao</button>
+                    <button onclick="filterRegion('Visayas')" class="region-pill px-3.5 py-1.5 rounded-full bg-cream-200 text-slate-700 hover:bg-cream-300">Visayas</button>
+                    <button onclick="filterRegion('Luzon')" class="region-pill px-3.5 py-1.5 rounded-full bg-cream-200 text-slate-700 hover:bg-cream-300">Luzon</button>
+                    <button onclick="filterRegion('E-Commerce')" class="region-pill px-3.5 py-1.5 rounded-full bg-cream-200 text-slate-700 hover:bg-cream-300">Online Flagships</button>
+                </div>
+            </div>
+
+            <!-- Store Cards Grid -->
+            <div id="store-grid" class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Retailer 1 -->
+                <div class="store-item Luzon Visayas Mindanao bg-white p-6 rounded-3xl border border-cream-300 shadow-sm hover:border-amberGold-500 transition-all space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2.5 py-1 rounded-md">Supermarket Chain</span>
+                        <span class="text-xs text-emerald-600 font-semibold flex items-center gap-1">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Official Partner
+                        </span>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">SM Supermarket & Savemore</h3>
+                    <p class="text-xs text-slate-500">Available nationwide in SM Malls, Hypermarket, and Savemore branches across Luzon, Visayas, and Mindanao.</p>
+                    <div class="pt-3 border-t border-cream-200 text-xs font-semibold text-slate-600 flex justify-between">
+                        <span>Aisle: Vinegar & Condiments</span>
+                        <span class="text-amberGold-700 font-bold">Luzon • Visayas • Mindanao</span>
+                    </div>
+                </div>
+
+                <!-- Retailer 2 -->
+                <div class="store-item Luzon Visayas Mindanao bg-white p-6 rounded-3xl border border-cream-300 shadow-sm hover:border-amberGold-500 transition-all space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2.5 py-1 rounded-md">Supermarket Chain</span>
+                        <span class="text-xs text-emerald-600 font-semibold flex items-center gap-1">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Official Partner
+                        </span>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">Robinsons Supermarket</h3>
+                    <p class="text-xs text-slate-500">Stocked in Robinsons Supermarkets, Robinsons Easymart, and The Market Place locations nationwide.</p>
+                    <div class="pt-3 border-t border-cream-200 text-xs font-semibold text-slate-600 flex justify-between">
+                        <span>Section: Proudly Philippine Made</span>
+                        <span class="text-amberGold-700 font-bold">Nationwide</span>
+                    </div>
+                </div>
+
+                <!-- Retailer 3 -->
+                <div class="store-item Visayas Mindanao bg-white p-6 rounded-3xl border border-cream-300 shadow-sm hover:border-amberGold-500 transition-all space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="bg-red-100 text-red-800 text-[10px] font-bold px-2.5 py-1 rounded-md">Regional Supermarket</span>
+                        <span class="text-xs text-emerald-600 font-semibold flex items-center gap-1">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Official Partner
+                        </span>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">Gaisano Grand & Capital Malls</h3>
+                    <p class="text-xs text-slate-500">Widespread distribution in key cities across Visayas and Mindanao commercial hubs.</p>
+                    <div class="pt-3 border-t border-cream-200 text-xs font-semibold text-slate-600 flex justify-between">
+                        <span>Aisle: Regional Gourmet</span>
+                        <span class="text-amberGold-700 font-bold">Visayas & Mindanao</span>
+                    </div>
+                </div>
+
+                <!-- Retailer 4 -->
+                <div class="store-item E-Commerce bg-white p-6 rounded-3xl border border-cream-300 shadow-sm hover:border-amberGold-500 transition-all space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="bg-orange-100 text-orange-800 text-[10px] font-bold px-2.5 py-1 rounded-md">Online E-Commerce</span>
+                        <span class="text-xs text-emerald-600 font-semibold flex items-center gap-1">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Fast Shipping
+                        </span>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">Shopee Official Mall Store</h3>
+                    <p class="text-xs text-slate-500">Order individual bottles or multi-pack crates delivered safely to your home.</p>
+                    <div class="pt-3 border-t border-cream-200 flex justify-between items-center">
+                        <span class="text-xs text-slate-500 font-semibold">Official Online Store</span>
+                        <a href="https://shopee.ph" target="_blank" rel="noopener" class="text-xs font-bold text-orange-600 hover:underline flex items-center gap-1">
+                            <span>Visit Shopee</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Retailer 5 -->
+                <div class="store-item E-Commerce bg-white p-6 rounded-3xl border border-cream-300 shadow-sm hover:border-amberGold-500 transition-all space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2.5 py-1 rounded-md">Online E-Commerce</span>
+                        <span class="text-xs text-emerald-600 font-semibold flex items-center gap-1">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Fast Shipping
+                        </span>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">Lazada Official Mall Store</h3>
+                    <p class="text-xs text-slate-500">Direct fulfillment from Mindanao and Metro Manila distribution warehouses.</p>
+                    <div class="pt-3 border-t border-cream-200 flex justify-between items-center">
+                        <span class="text-xs text-slate-500 font-semibold">Official Online Store</span>
+                        <a href="https://lazada.com.ph" target="_blank" rel="noopener" class="text-xs font-bold text-blue-600 hover:underline flex items-center gap-1">
+                            <span>Visit Lazada</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Retailer 6 -->
+                <div class="store-item Luzon Visayas Mindanao International bg-white p-6 rounded-3xl border border-cream-300 shadow-sm hover:border-amberGold-500 transition-all space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="bg-purple-100 text-purple-800 text-[10px] font-bold px-2.5 py-1 rounded-md">B2B / Export</span>
+                        <span class="text-xs text-purple-700 font-semibold">Bulk Crates</span>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">Direct Factory Wholesalers</h3>
+                    <p class="text-xs text-slate-500">Commercial bulk supply for restaurants, exporters, and overseas Asian grocers.</p>
+                    <div class="pt-3 border-t border-cream-200 flex justify-between items-center">
+                        <span class="text-xs text-slate-500 font-semibold">Iligan HQ Sales</span>
+                        <a href="#wholesale" class="text-xs font-bold text-maroon-800 hover:underline flex items-center gap-1">
+                            <span>Inquire Bulk</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- IP Authenticity Protection Banner -->
+    <section id="authenticity" class="py-16 bg-cream-100 border-t border-b border-cream-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-maroon-950 via-maroon-900 to-maroon-950 rounded-3xl p-8 sm:p-12 border-2 border-amberGold-500/40 text-white relative overflow-hidden shadow-2xl">
+                
+                <div class="grid lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-8 space-y-4">
+                        <div class="inline-flex items-center gap-2 bg-amberGold-500/20 text-amberGold-400 font-bold text-xs px-3 py-1 rounded-full border border-amberGold-500/40">
+                            <i data-lucide="shield-check" class="w-4 h-4"></i>
+                            <span>BRAND PROTECTION & INTELLECTUAL PROPERTY</span>
+                        </div>
+                        <h2 class="font-serif text-2xl sm:text-3xl font-extrabold text-amber-100">Protecting the Original Pinakurat Recipe</h2>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            <span class="text-amberGold-400 font-semibold">Suka Pinakurat™®©</span> is a legally registered trademark of Green Gold Gourmet Foods Inc. Beware of unauthorized imitation vinegars that use artificial synthetic acids lacking our natural coconut tuba fermentation process.
+                        </p>
+                        <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                            <div class="flex items-start gap-3 bg-maroon-900/60 p-3 rounded-xl border border-amberGold-500/20">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amberGold-400 shrink-0 mt-0.5"></i>
+                                <p class="text-xs text-slate-200"><strong class="text-amber-100">Gold Security Cap:</strong> Verify cap design with official Green Gold seal.</p>
+                            </div>
+                            <div class="flex items-start gap-3 bg-maroon-900/60 p-3 rounded-xl border border-amberGold-500/20">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amberGold-400 shrink-0 mt-0.5"></i>
+                                <p class="text-xs text-slate-200"><strong class="text-amber-100">Provenance Mark:</strong> Produced in Iligan City, Lanao del Norte.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-4 flex justify-center">
+                        <div class="w-36 h-36 rounded-full border-4 border-amberGold-400 bg-maroon-900 flex flex-col items-center justify-center text-center p-3 shadow-2xl relative">
+                            <i data-lucide="award" class="w-12 h-12 text-amberGold-400 mb-1"></i>
+                            <span class="text-[11px] font-extrabold tracking-widest text-amberGold-300 uppercase">OFFICIAL SEAL</span>
+                            <span class="text-[8px] text-amber-100/70 font-mono mt-0.5">TRADEMARK REG.</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Wholesale & B2B Export Inquiry Section -->
+    <section id="wholesale" class="py-20 bg-cream-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-maroon-700 font-bold text-xs tracking-widest uppercase">Commercial Partnership</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-maroon-900">Partner with Green Gold Gourmet</h2>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Whether you are a national supermarket distributor, restaurant chain owner, or international food importer, reach out directly to secure official bulk shipments.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-cream-300 shadow-sm">
+                            <div class="w-12 h-12 bg-maroon-100 text-maroon-800 rounded-xl flex items-center justify-center shrink-0">
+                                <i data-lucide="globe-2" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">International Export Ready</h4>
+                                <p class="text-xs text-slate-500">Shipping to US, Canada, Middle East, Australia & Asia</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-cream-300 shadow-sm">
+                            <div class="w-12 h-12 bg-amberGold-500/20 text-amberGold-800 rounded-xl flex items-center justify-center shrink-0">
+                                <i data-lucide="truck" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Container Bulk Supply</h4>
+                                <p class="text-xs text-slate-500">Direct pallet & crate deliveries for food service kitchens</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-cream-300 shadow-xl">
+                    <form id="wholesale-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Full Name *</label>
+                                <input type="text" id="form-name" required placeholder="e.g. Maria Santos" class="w-full px-4 py-3 rounded-xl border border-cream-300 focus:ring-2 focus:ring-amberGold-500 focus:outline-none text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Company / Business Name *</label>
+                                <input type="text" id="form-company" required placeholder="e.g. Pacific Supermarket Chain" class="w-full px-4 py-3 rounded-xl border border-cream-300 focus:ring-2 focus:ring-amberGold-500 focus:outline-none text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email Address *</label>
+                                <input type="email" id="form-email" required placeholder="name@company.com" class="w-full px-4 py-3 rounded-xl border border-cream-300 focus:ring-2 focus:ring-amberGold-500 focus:outline-none text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Inquiry Category</label>
+                                <select id="form-category" class="w-full px-4 py-3 rounded-xl border border-cream-300 focus:ring-2 focus:ring-amberGold-500 focus:outline-none text-sm bg-white">
+                                    <option>Supermarket Distribution</option>
+                                    <option>International Export</option>
+                                    <option>Restaurant Bulk Supply</option>
+                                    <option>Distributorship Partner</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Message & Target Volume Details *</label>
+                            <textarea id="form-message" rows="4" required placeholder="Describe your business location, required volumes, or export destination..." class="w-full px-4 py-3 rounded-xl border border-cream-300 focus:ring-2 focus:ring-amberGold-500 focus:outline-none text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-maroon-800 to-maroon-900 hover:from-maroon-700 hover:to-maroon-800 text-amberGold-400 font-bold py-4 rounded-xl shadow-lg transition-all text-sm flex items-center justify-center gap-2">
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                            <span>Submit Partnership Proposal</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-maroon-950 text-slate-400 border-t border-maroon-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+                <div class="space-y-2">
+                    <div class="flex items-center justify-center md:justify-start gap-2">
+                        <span class="text-2xl">🌶️</span>
+                        <span class="font-serif font-extrabold text-xl text-amber-100 tracking-wider">SUKA PINAKURAT</span>
+                    </div>
+                    <p class="text-xs text-slate-400">Green Gold Gourmet Foods Inc. • Iligan City, Lanao del Norte, Philippines</p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-6 text-xs font-semibold text-slate-300">
+                    <a href="#heritage" class="hover:text-amberGold-400 transition-colors">Heritage</a>
+                    <a href="#products" class="hover:text-amberGold-400 transition-colors">Products</a>
+                    <a href="#pairing" class="hover:text-amberGold-400 transition-colors">Flavor Science</a>
+                    <a href="#locator" class="hover:text-amberGold-400 transition-colors">Where to Buy</a>
+                    <a href="#wholesale" class="hover:text-amberGold-400 transition-colors">Wholesale</a>
+                </div>
+            </div>
+
+            <div class="border-t border-maroon-900 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+                <p>© 2026 Green Gold Gourmet Foods Inc. All Rights Reserved. Suka Pinakurat™®© is a registered trademark.</p>
+                <p class="flex items-center gap-1.5">
+                    <span>Designed for Brand Excellence</span>
+                    <span class="text-amberGold-500">•</span>
+                    <span>Iligan City Provenance</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Quick View Modal Overlay -->
+    <div id="product-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white max-w-lg w-full rounded-3xl p-8 space-y-6 relative border border-cream-300 shadow-2xl">
+            <button onclick="closeProductModal()" class="absolute top-6 right-6 p-2 rounded-full bg-cream-100 hover:bg-cream-200 text-slate-600 transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div id="modal-content" class="space-y-4">
+                <!-- Populated dynamically via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Message Box (No alert used) -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-maroon-950 text-amberGold-400 border-2 border-amberGold-500 px-6 py-4 rounded-2xl shadow-2xl hidden flex items-center gap-3">
+        <i data-lucide="check-circle" class="w-6 h-6 text-amberGold-400 shrink-0"></i>
+        <div>
+            <h5 class="font-bold text-amber-100 text-sm" id="toast-title">Proposal Submitted Successfully!</h5>
+            <p class="text-xs text-slate-300" id="toast-msg">Our sales management team in Iligan City will contact you shortly.</p>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Vector Icons
+        lucide.createIcons();
+
+        // Mobile Menu Drawer Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Catalog Filter Logic
+        function filterProducts(category) {
+            const tabs = document.querySelectorAll('.product-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-maroon-800', 'text-white', 'shadow-sm');
+                tab.classList.add('text-slate-700');
+            });
+
+            event.target.classList.add('bg-maroon-800', 'text-white', 'shadow-sm');
+            event.target.classList.remove('text-slate-700');
+
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Dish Pairing Database
+        const dishData = {
+            lechon: {
+                recommended: "Suka Pinakurat Original",
+                score: "100%",
+                heat: "🌶️🌶️🌶️🌶️🌶️ (High Acid / Extra Hot)",
+                description: "The natural organic acetic acid from fermented tuba sap cuts cleanly through heavy pork lipids and crunchy skin, while native chilis trigger savoriness.",
+                recipe: "3 tbsp Pinakurat Original + 1 crushed calamansi + 1/2 tsp roasted garlic chips + 1 chopped bird's eye chili."
+            },
+            pata: {
+                recommended: "Suka Pinakurat Original",
+                score: "99%",
+                heat: "🌶️🌶️🌶️🌶️🌶️ (High Acid / Extra Hot)",
+                description: "Slices through deep-fried pork collagen fat while providing a pungent garlic chili aroma.",
+                recipe: "4 tbsp Pinakurat Original + 1 tbsp soy sauce + 1/2 tsp crushed garlic."
+            },
+            bbq: {
+                recommended: "Suka Pinakurat Sweetened",
+                score: "97%",
+                heat: "🌶️🌶️🌶️ (Balanced Sweet-Spicy)",
+                description: "Complements the caramelized sweet banana ketchup glaze of pork skewers with balanced tangy acidity.",
+                recipe: "3 tbsp Sweetened Pinakurat + 1 pinch black pepper + sliced shallots."
+            },
+            chicharon: {
+                recommended: "Suka Pinakurat Original / Sweetened",
+                score: "98%",
+                heat: "🌶️🌶️🌶️🌶️🌶️ (High Acidity)",
+                description: "Cleanses the palate after crunchy fried mesentery bites, making every dip taste fresh and non-greasy.",
+                recipe: "4 tbsp Pinakurat + coarse sea salt + crushed native garlic cloves."
+            },
+            tilapia: {
+                recommended: "Suka Waykurat (Garlic Infused)",
+                score: "95%",
+                heat: "🌿 Zero Capsicum Heat",
+                description: "Highlights the delicate natural taste of grilled fish without overpowering it with spicy chili heat.",
+                recipe: "3 tbsp Waykurat + julienned ginger + thinly sliced red onions."
+            },
+            lumpia: {
+                recommended: "Suka Pinakurat Original",
+                score: "96%",
+                heat: "🌶️🌶️🌶️🌶️🌶️ (Tangy Chili)",
+                description: "Cuts through fried lumpia wrapper oil and minced pork filling for a clean, mouthwatering bite.",
+                recipe: "Direct dipping: Undiluted Suka Pinakurat Original."
+            }
+        };
+
+        function selectDish(dishKey, buttonEl) {
+            const data = dishData[dishKey];
+            if (!data) return;
+
+            document.getElementById('pair-recommended').innerText = data.recommended;
+            document.getElementById('pair-score').innerText = data.score;
+            document.getElementById('pair-heat').innerText = data.heat;
+            document.getElementById('pair-description').innerText = data.description;
+            document.getElementById('pair-recipe').innerText = data.recipe;
+
+            // Update UI active buttons
+            const buttons = document.querySelectorAll('.dish-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active-dish', 'border-2', 'border-amberGold-500', 'bg-maroon-900', 'shadow-lg');
+                btn.classList.add('border', 'border-amberGold-600/30', 'bg-maroon-900/60');
+            });
+
+            buttonEl.classList.add('active-dish', 'border-2', 'border-amberGold-500', 'bg-maroon-900', 'shadow-lg');
+            buttonEl.classList.remove('border-amberGold-600/30', 'bg-maroon-900/60');
+        }
+
+        // Store Search & Region Filter
+        function filterStores() {
+            const query = document.getElementById('store-search').value.toLowerCase();
+            const items = document.querySelectorAll('.store-item');
+
+            items.forEach(item => {
+                const text = item.innerText.toLowerCase();
+                if (text.includes(query)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function filterRegion(region) {
+            const pills = document.querySelectorAll('.region-pill');
+            pills.forEach(p => {
+                p.classList.remove('bg-maroon-800', 'text-white');
+                p.classList.add('bg-cream-200', 'text-slate-700');
+            });
+
+            event.target.classList.add('bg-maroon-800', 'text-white');
+            event.target.classList.remove('bg-cream-200', 'text-slate-700');
+
+            const items = document.querySelectorAll('.store-item');
+            items.forEach(item => {
+                if (region === 'all' || item.classList.contains(region)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Modal Product Data
+        const modalData = {
+            'pinakurat-original': {
+                title: 'Suka Pinakurat Original',
+                badge: 'Extra Hot Spiced Vinegar',
+                desc: '100% pure fermented coconut tuba sap infused with wild native bird\'s eye chili, fresh garlic, ginger, and indigenous spices.',
+                ingredients: 'Natural Coconut Sap (Sukang Tuba), Native Chili, Garlic, Ginger, Peppercorn, Sea Salt.',
+                volume: '250ml / 750ml Glass Bottles',
+                shelf: '24 Months'
+            },
+            'pinakurat-sweetened': {
+                title: 'Suka Pinakurat Sweetened',
+                badge: 'Sweet & Tangy Blend',
+                desc: 'A milder sweet variant crafted with raw unrefined cane sugar and fermented tuba sap.',
+                ingredients: 'Fermented Coconut Sap, Cane Sugar, Native Garlic, Peppercorn, Chili.',
+                volume: '250ml Glass Bottle',
+                shelf: '24 Months'
+            },
+            'waykurat': {
+                title: 'Suka Waykurat',
+                badge: 'Zero Capsicum Heat',
+                desc: 'Pure garlic and aromatic herb coconut vinegar without spicy capsicum fire.',
+                ingredients: 'Fermented Coconut Sap, Native Garlic, Ginger, Herbs, Sea Salt.',
+                volume: '250ml Glass Bottle',
+                shelf: '24 Months'
+            },
+            'delisario': {
+                title: 'Delisario™ Artisan Craft Meats',
+                badge: 'Gourmet Cured Processed Meats',
+                desc: 'Gourmet cured bacon, native longganisa, and hardwood smoked deli sausages made to pair with Pinakurat.',
+                ingredients: 'Choice Pork Cuts, Garlic, Sea Salt, Natural Spices.',
+                volume: 'Vacuum Sealed Frozen Packs',
+                shelf: '6 Months (Frozen)'
+            },
+            'fatpaulys': {
+                title: 'Fat Pauly\'s™ Hand-Crafted Ales',
+                badge: 'Iligan Craft Brewery',
+                desc: 'Local craft beer brewed in Iligan City utilizing local grains and indigenous Philippine herbs.',
+                ingredients: 'Malted Barley, Hops, Local Philippine Botanicals, Purified Water.',
+                volume: '330ml Glass Bottle',
+                shelf: '12 Months'
+            }
+        };
+
+        function openProductModal(key) {
+            const item = modalData[key];
+            if (!item) return;
+
+            const content = document.getElementById('modal-content');
+            content.innerHTML = `
+                <div class="inline-block bg-amberGold-500/20 text-amberGold-800 font-extrabold text-xs px-3 py-1 rounded-full uppercase mb-1">
+                    ${item.badge}
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-maroon-900">${item.title}</h3>
+                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">${item.desc}</p>
+
+                <div class="bg-cream-100 p-4 rounded-2xl space-y-2 text-xs border border-cream-300">
+                    <p><strong>Ingredients:</strong> ${item.ingredients}</p>
+                    <p><strong>Packaging Options:</strong> ${item.volume}</p>
+                    <p><strong>Shelf Life:</strong> ${item.shelf}</p>
+                </div>
+
+                <a href="#locator" onclick="closeProductModal()" class="w-full block text-center bg-maroon-800 hover:bg-maroon-900 text-amberGold-400 font-bold py-3.5 rounded-xl transition-colors text-xs uppercase tracking-wider">
+                    Find Retailer or Buy Online
+                </a>
+            `;
+
+            document.getElementById('product-modal').classList.remove('hidden');
+        }
+
+        function closeProductModal() {
+            document.getElementById('product-modal').classList.add('hidden');
+        }
+
+        // B2B Wholesale Form Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const toast = document.getElementById('toast');
+            toast.classList.remove('hidden');
+
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4500);
+
+            document.getElementById('wholesale-form').reset();
+        }
+    </script>
+</body>
+</html>
